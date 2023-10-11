@@ -5,11 +5,20 @@ from uuid import uuid4
 from datetime import datetime
 
 class BaseModel:
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """initializing BaseModel class"""
-        self.id = str(uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if not kwargs:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+
+        else:
+            date_time = "%Y-%m-%dT%H:%M:%S.%f"
+            for key, value in kwargs.items():
+                if key == "created_at" or key == "updated_at":
+                    value = datetime.strptime(value, date_time)
+                if key != "__class__":
+                    setattr(self, key, value)
 
     def __str__(self):
         """Define human readable of BaseModel Object"""
