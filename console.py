@@ -2,6 +2,7 @@
 import cmd
 """file that controls the entry point of command interpreter"""
 
+
 class HBNBCommand(cmd.Cmd):
     """a custom prompt"""
     prompt = "(hbnb) "
@@ -14,10 +15,11 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, arg):
         """EOF to exit the program"""
         return True
-    
+
     def emptyline(self):
         """shouldn’t execute anything"""
         return
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
