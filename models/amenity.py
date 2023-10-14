@@ -4,6 +4,5 @@ from base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """City Class attributes """
-    state_id = ""
+    """Amenity Class attributes """
     name = ""
