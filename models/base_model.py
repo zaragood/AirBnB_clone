@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 """This module contains BaseModel class"""
-from uuid import uuid4
+import uuid
 from datetime import datetime
 import models
 
 
 class BaseModel:
+    """The base Model class"""
     def __init__(self, *args, **kwargs):
         """initializing BaseModel class"""
         if not kwargs:
-            self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            self.id = str(uuid.uuid4())
             models.storage.new(self)
 
         else:
