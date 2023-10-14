@@ -1,8 +1,14 @@
 #!/usr/bin/python3
+"""importing all necessary classes to be used"""
 import cmd
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
+from models.state import State
+from models.place import Place
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 """file that controls the entry point of command interpreter"""
 
 
@@ -34,6 +40,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             new_obj = eval(f"{args[0]}")()
             print(new_obj.id)
+        storage.save()
 
     def do_show(self, arg):
         """Prints the string representation of an instance
@@ -80,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
             dic = storage.all().items()
             print([str(val) for key, val in dic if key.startswith(args[0])])
 
-    def do_update(self, args):
+    def do_update(self, arg):
         """"""
         args = arg.split()
 
@@ -96,6 +103,27 @@ class HBNBCommand(cmd.Cmd):
             print("** attribute name missing **")
         elif len(args) == 3:
             print("** value missing **")
+        else:
+            object_cls_name = args[0]
+            object_id = args[1]
+            object_key = f"{object_cls_name}.{object_id}"
+            object_ = storage.all()[object_key]
+
+            attribute_name = args[2]
+            attribute_value = args[3]
+
+            if attribute_value[0] == '"':
+                attribute_value = attribute_value[1:-1]
+
+            if hasattr(object_, attribute_name):
+                attribute_type = type(getattr(object_,attribute_name))
+
+                if attribute_type in [str, int, float]:
+                    attribute_value  = attribute_type(attribute_value)
+                    setattr(object_, attribute_name, attribute_value)
+            else:
+                setattr(object_, attribute_name, attribute_value)
+            storage.save()
 
 
 
