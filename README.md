@@ -44,27 +44,38 @@ quit or EOF: Exit the command interpreter.
 
 # Examples
 Here are some examples of how to use the AirBnB Clone Command Line Interpreter:
-
+<pre>
 1. Creating a User:
 
+```bash
 (hbnb) create User
+```
 
 2. Showing a User:
 
+```bash
 (hbnb) show User 12345
+```
 
 3. Listing all Users:
 
+```bash
 (hbnb) User.all()
+```
 
 4. Updating a User's email:
 
+```bash
 (hbnb) update User 12345 email "newemail@example.com"
+```
 
 5. Quitting the program:
 
+```bash
 (hbnb) quit
+```
 
+</pre>
 # Key Features
 1. Console Interface
 Create a user-friendly command-line console that serves as a tool for interacting with your data objects.
