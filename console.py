@@ -116,15 +116,14 @@ class HBNBCommand(cmd.Cmd):
                 attribute_value = attribute_value[1:-1]
 
             if hasattr(object_, attribute_name):
-                attribute_type = type(getattr(object_,attribute_name))
+                attribute_type = type(getattr(object_, attribute_name))
 
                 if attribute_type in [str, int, float]:
-                    attribute_value  = attribute_type(attribute_value)
+                    attribute_value = attribute_type(attribute_value)
                     setattr(object_, attribute_name, attribute_value)
             else:
                 setattr(object_, attribute_name, attribute_value)
             storage.save()
-
 
 
 if __name__ == '__main__':
