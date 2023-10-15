@@ -14,7 +14,8 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """a custom prompt"""
-    __classes = ("BaseModel", "User",)
+    __classes = ("BaseModel", "User", "State", "Place",
+                 "City", "Amenity", "Review")
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
