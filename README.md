@@ -47,31 +47,31 @@ Here are some examples of how to use the AirBnB Clone Command Line Interpreter:
 <pre>
 1. Creating a User:
 
-```bash
+``` bash
 (hbnb) create User
 ```
 
 2. Showing a User:
 
-```bash
+``` bash
 (hbnb) show User 12345
 ```
 
 3. Listing all Users:
 
-```bash
+``` bash
 (hbnb) User.all()
 ```
 
 4. Updating a User's email:
 
-```bash
+``` bash
 (hbnb) update User 12345 email "newemail@example.com"
 ```
 
 5. Quitting the program:
 
-```bash
+``` bash
 (hbnb) quit
 ```
 
