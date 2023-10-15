@@ -1,13 +1,6 @@
 #!/usr/bin/python3
 """importing all necessary classes to be used"""
 import json
-from models.base_model import BaseModel
-from models.user import User
-from models.state import State
-from models.place import Place
-from models.city import City
-from models.amenity import Amenity
-from models.review import Review
 """Defining a base class FileStorage"""
 
 
@@ -35,6 +28,16 @@ class FileStorage():
             json.dump(dic, f)
 
     def reload(self):
+        """importing models to manage correctly serialization
+        and deserialization of all our new classes
+        """
+        from models.base_model import BaseModel
+        from models.user import User
+        from models.state import State
+        from models.place import Place
+        from models.city import City
+        from models.amenity import Amenity
+        from models.review import Review
         """Method that deserializes the JSON file to __objects"""
         try:
             with open(self.__file_path, "r", encoding="utf-8") as f:
