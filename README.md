@@ -43,8 +43,8 @@ update <class name> <id> <attribute name> "<attribute value>": Update an instanc
 quit or EOF: Exit the command interpreter.
 
 # Examples
-Here are some examples of how to use the AirBnB Clone Command Line Interpreter:
-<pre>
+__Here are some examples of how to use the AirBnB Clone Command Line Interpreter:__
+
 1. Creating a User:
 
 ``` bash
@@ -75,7 +75,6 @@ Here are some examples of how to use the AirBnB Clone Command Line Interpreter:
 (hbnb) quit
 ```
 
-</pre>
 # Key Features
 1. Console Interface
 Create a user-friendly command-line console that serves as a tool for interacting with your data objects.
