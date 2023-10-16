@@ -14,8 +14,9 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """a custom prompt"""
-    __classes = ("BaseModel", "User", "State", "City", "Amenity", "Place", "Review",)
     prompt = "(hbnb) "
+    __classes = ("BaseModel", "User", "State", "Place",
+                 "City", "Amenity", "Review")
 
     def do_quit(self, arg):
         """quit command to exit the program
@@ -88,7 +89,9 @@ class HBNBCommand(cmd.Cmd):
             print([str(val) for key, val in dic if key.startswith(args[0])])
 
     def do_update(self, arg):
-        """"""
+        """Updates an instance based on the class name and id
+         by adding or updating attribute save the change into the JSON file
+        """
         args = arg.split()
 
         if len(args) == 0:
