@@ -14,7 +14,7 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """a custom prompt"""
-    __classes = ("BaseModel", "User",)
+    __classes = ("BaseModel", "User", "State", "City", "Amenity", "Place", "Review",)
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
@@ -124,6 +124,15 @@ class HBNBCommand(cmd.Cmd):
             else:
                 setattr(object_, attribute_name, attribute_value)
             storage.save()
+
+    def default(self, arg):
+        """retrieve all instances of a class by using:
+           <class name>.all()
+        """
+        args = arg.split(".")
+        if args[0] in self.__classes:
+            if args[1] == "all()":
+                self.do_all(args[0])
 
 
 if __name__ == '__main__':
