@@ -146,8 +146,9 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             count_list = [key for key in
-                    storage.all() if key.startswith(args[0] + ".")]
+                          storage.all() if key.startswith(args[0] + ".")]
             print(len(count_list))
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
