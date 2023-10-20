@@ -136,18 +136,21 @@ class HBNBCommand(cmd.Cmd):
         if args[0] in self.__classes:
             if args[1] == "all()":
                 self.do_all(args[0])
-
-    def do_count(self, arg):
-        """Count the number of instances in a class"""
-        args = arg.split(" ")
-        if not args[0]:
-            print("** class name missing **")
-        elif args[0] not in storage.classes():
-            print("** class doesn't exist **")
-        else:
-            count_list = [key for key in
-                          storage.all() if key.startswith(args[0] + ".")]
-            print(len(count_list))
+            elif args[1] == "count()":
+                dic = storage.all().items()
+                num_list = [val for key, val in dic if key.startswith(args[0])]
+                print(len(num_list))
+            elif args[1].startswith("show"):
+                _id = args[1].split('"')[1]
+                self.do_show(f"{args[0]} {_id}")
+            elif args[1].startswith("destroy"):
+                _id = args[1].split('"')[1]
+                self.do_destroy(f"{args[0]} {_id}")
+            elif args[1].startswith("update"):
+                _id = args[1].split('"')[1]
+                attr_name = args[1].split(', ')[1]
+                attr_value = args[1].split(', ')[2][0:-1]
+                self.do_update(f"{args[0]} {_id} {attr_name} {attr_value}")
 
 
 if __name__ == '__main__':
