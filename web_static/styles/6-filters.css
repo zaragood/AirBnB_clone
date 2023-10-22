@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+header {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.logo {
+    height: 100%;
+    background-image: url("images/abnb_logo.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.filters {
+    display: flex;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    position: relative;
+}
+
+button {
+    height: 48px;
+    width: 20%;
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    right: 30px;
+    top: 0.7rem;
+}
+
+button:hover {
+    opacity: 90%;
+}
+
+.locations,
+.amenities {
+    height: 100%;
+    width: 25%;
+}
+
+.locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+h3 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+h3,
+h4 {
+    padding-left: 30px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.popover {
+    position: relative;
+    display: inline-block;
+}
+
+.popover-content {
+    position: absolute;
+    background-color: #FAFAFA;
+    width: 100%;
+    overflow: auto;
+    display: none;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+
+
+}
+
+.popover:hover .popover-content {
+    display: block;
+}
+
+ul.style {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+li h2 {
+    padding-top: 10px;
+    margin: 0;
+}
+
+ul.style,
+li {
+    list-style: none;
+    font-size: 16px;
+}
