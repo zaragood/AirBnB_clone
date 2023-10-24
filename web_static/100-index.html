@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBnB</title>
+    <link rel="stylesheet" href="styles/4-common.css">
+    <link rel="stylesheet" href="styles/3-header.css">
+    <link rel="stylesheet" href="styles/3-footer.css">
+    <link rel="stylesheet" href="styles/6-filters.css">
+    <link rel="stylesheet" href="styles/100-places.css">
+    <link rel="icon" href="./images/icon-abnb.png">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+    </header>
+    
+    <div class="container">
+	    <section class="filters">
+		    <div class="locations popover">
+			    <h3>States</h3>
+			    <h4>Canada, uk ...</h4>
+                <div class="popover-content">
+                    <ul>
+                        <li class="style"><h2>Canada</h2></li>
+                        <ul class="style">
+                            <li>page</li>
+                            <li>page2</li>
+                        </ul>
+                        <li class="style"><h2>UK</h2></li>
+                        <ul class="style">
+                            <li>page1</li>
+                            <li>page2</li>
+                        </ul>
+                    </ul>
+                </div>
+		    </div>
+		    <div class="amenities popover">
+			    <h3>Amenities</h3>
+			    <h4>internet, pool ...</h4>
+                <div class="popover-content">
+                    <ul>
+                        <li>Internet</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>Laundry machine</li>
+                    </ul>
+                </div>
+		    </div>
+
+		    <button>Search</button>
+	    </section>
+        <section class="places">
+            <h1>Places</h1>
+            <div id="list">
+                <article>
+                    <div class="price_tag">
+                        <h2>My Home</h2>
+                        <div class="price_by_night">$200</div>
+                    </div>
+                    
+                    <div class="information">
+
+                        <div class="max_guest">
+                            <p>2 guests</p>
+                        </div>
+
+                        <div class="number_rooms">
+                            <p>3 beds</p>
+                        </div>
+
+                        <div class="number_bathrooms">
+                            <p>3 bathrooms</p>
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <p><b>Owner: </b>Mrs. Evelyn Parker</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Nestled in a quiet cul-de-sac, this contemporary residence is a masterpiece
+                            of minimalist design. With floor-to-ceiling windows, 
+                            an open-concept living space, and a Zen-inspired garden,
+                            Mrs. Parker's home seamlessly blends indoor and outdoor living, 
+                            offering a serene retreat in the heart of the city.
+                        </p>
+                    </div>
+
+                    <div class="amenities">
+                        <h2>Amenities</h2>
+                        <ul>
+                            <li id="first">TV</li>
+                            <li id="second">WiFi</li>
+                            <li id="third">Pets Friendly</li>
+                        </ul>
+                    </div>
+
+                    <div class="reviews">
+                        <h2>2 Reviews</h2>
+                        <ul>
+                            <li>
+                                <h3>From Jessica Thompson the 8th march 2021</h3>
+                                <p>I recently had the pleasure of touring Mrs. Evelyn Parker's
+                                     Victorian home, and I was absolutely captivated. </p>
+                            </li>
+                            <li>
+                                <h3>From Ozioma Williams 6th august 2021</h3>
+                                <p>The stained glass windows and original hardwood floors are exquisite,
+                                     and the gourmet kitchen is a chef's dream. </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <article>
+                    <div class="price_tag">
+                        <h2>Tiny House</h2>
+                        <div class="price_by_night">$180</div>
+                    </div>
+                    
+                    <div class="information">
+
+                        <div class="max_guest">
+                            <p>2 guests</p>
+                        </div>
+
+                        <div class="number_rooms">
+                            <p>3 beds</p>
+                        </div>
+
+                        <div class="number_bathrooms">
+                            <p>3 bathrooms</p>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <p><b>Owner: </b>Mrs. Emily Thompson</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Elegant Victorian home featuring modern amenities such as a gourmet kitchen,
+                             cozy fireplace, and spa-like bathrooms. The house boasts intricate stained
+                              glass windows, original hardwood floors, and a picturesque garden, creating
+                               a warm and inviting atmosphere.
+                        </p>
+                    </div>
+
+                    <div class="amenities">
+                        <h2>Amenities</h2>
+                        <ul>
+                            <li id="bathroom">Spa-like bathroom</li>
+                            <li id="second">WiFi</li>
+                            <li id="kitchen">Gourmet Kitchen</li>
+                        </ul>
+                    </div>
+
+                    <div class="reviews">
+                        <h2>2 Reviews</h2>
+                        <ul>
+                            <li>
+                                <h3>From Michael Lee the 2nd may 2023</h3>
+                                <p>
+                                    Exploring Mr. Robert Harris' house was an eye-opener.
+                                     The sustainable features like solar panels and smart home technology
+                                      truly reflect his forward-thinking approach. 
+                                </p>
+                                <h3>From Emily Johnson the 18 october 2023</h3>
+                                <p>
+                                    The master suite feels like a five-star hotel, 
+                                    and the backyard oasis with the pool
+                                     and outdoor kitchen is a dream come true. 
+                                </p>
+
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="price_tag">
+                        <h2>A Suit</h2>
+                        <div class="price_by_night">$120</div>
+                    </div>    
+
+                    <div class="information">
+
+                        <div class="max_guest">
+                            <p>2 guests</p>
+                        </div>
+
+                        <div class="number_rooms">
+                            <p>3 beds</p>
+                        </div>
+
+                        <div class="number_bathrooms">
+                            <p>3 bathrooms</p>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <p><b>Owner: </b>Mr. Benjamin Hayes</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Chic urban townhouse with an open layout, floor-to-ceiling windows,
+                             and a rooftop terrace. The house is equipped with smart home technology,
+                              energy-efficient appliances, and contemporary furnishings, offering
+                               a seamless blend of style and functionality.
+                        </p>
+                    </div>
+                    <div class="amenities">
+                        <h2>Amenities</h2>
+                        <ul>
+                            <li id="second">WiFi</li>
+                            <li id="forth">Swimming pool</li>
+                        </ul>
+                    </div>
+
+                    <div class="reviews">
+                        <h2>1 Review</h2>
+                        <ul>
+                            <li>
+                                <h3>From Emily Johnson the 27th January 2022</h3>
+                                <p> 
+                                    Mr. Benjamin Hayes suburban retreat is nothing short of a paradise.
+                                     The spacious living area is elegantly furnished,
+                                     and the gourmet kitchen is equipped with top-of-the-line appliances. 
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <footer>Best School</footer>
+</body>
+</html>
